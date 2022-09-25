@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单</title>
+		<style type="text/css">
+			label{
+				text-align: left;
+				display: inline-block;
+				width: 80px;
+			}
+			
+			input{
+				margin-bottom: 10px;
+				padding: 2px;
+			}
+			#sub{
+				
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<label>姓名</label>
+			<input type="text" name="name" required/><br />
+			<label>年龄</label>
+			<input type="number" id="number" min="0" max="100"/><br />
+			<label>出生日期</label>
+			<input type="date" name="" id=""/><br />
+			<label>Email</label>
+			<input type="email" src="" required/><br />
+			<label for="url">个人主页</label>
+			<input type="url" name="url" id="url" pattern="https://.*" size="30" required/><br />
+			<label>个人简介</label>
+			<textarea cols=""></textarea><br />
+			<input type="submit" id="sub" value="提交"/>
+		</form>
+	</body>
+</html>
