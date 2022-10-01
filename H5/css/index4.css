@@ -1,0 +1,22 @@
+@charset "utf-8";
+#img{
+	background-color: #5DC7FF;
+	width: 250px;
+	height: 60px;
+	margin: 0 auto;
+	background-image: url(../img/soft1.png);
+	background-repeat: no-repeat;
+	background-size: 60px;
+	border:1px dotted rgb(170, 255, 255);
+	box-shadow: 0px 0px 5px 2px rgb(0, 155, 233);
+	border-radius: 3px;
+}
+p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	float: right;
+	font-family: 隶书;
+	font-size: 20px;
+	margin-right: 5px;
+}
