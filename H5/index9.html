@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>javascript</title>
+		<!-- <link rel="stylesheet" type="text/css" href="https://blog.huangwx.cn/css/sweetalert.css">
+		<script type="text/javascript" src="https://blog.huangwx.cn/js/sweetalert-dev.js"></script> -->
+		<script src="js/alert.js"></script>
+		<style type="text/css">
+			
+			#all{
+				width: 700px;
+				height: 450px;
+				background-image: url(img/girl.jpg);
+				background-size: 700px 450px;
+				box-shadow: 10px 10px 5px rgb(191, 191, 191);
+				margin: 0 auto;
+			}
+			.one{
+				text-align: center;
+				vertical-align: middle;
+			}
+			.nsn{
+				margin-top: 20px;
+				padding: 8px;	
+			}
+		</style>
+		<script type="text/javascript">
+			function myonblur(){
+			
+				alert("太o了");
+			
+			}
+				
+			function myonchange(){
+				alert("qvq");
+			}
+		</script>
+	</head>
+	<body>
+		<div id="ji">
+			<div id="all"></div>
+			<div class="one">
+				<input type="text" id="text" class="nsn" onclick="myclick()" onblur="myonblur()" onchange="myonchange()"/>
+			</div>	
+		</div>
+		
+	</body>
+</html>
