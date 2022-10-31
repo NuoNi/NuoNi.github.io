@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<style type="text/css">
+			div{
+				width: 300px;
+				height: 200px;
+				background-color: #9999CC;
+				border: 1px solid #fff674;
+			}
+			label{
+				width: 50px;
+				text-align: right;
+				display: inline-block;
+				color: white;
+			}
+			form{
+				text-align: center;
+			}
+			input[type=button]{
+				width: 70px;
+				padding: 2px;
+				border: 1px solid #F5F5F5;
+				border-radius: 2px;
+				background-color: #87CEEB;
+				vertical-align: middle;
+			}
+			p{
+				margin-left: 10px;
+				font-family: 宋体;
+				font-weight: bold;
+				color: #FFF674;
+			}
+			.user{
+				padding: 5px;
+			}
+		</style>
+		<script>
+			function $(id){
+			   return document.getElementById(id);
+			}
+			function login(){
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="">
+			<p>游客，你好！</p>
+			<form action="" method="">
+				<label>用户名</label>
+				<input type="text"  placeholder="请输入用户名" class="user" id="username"/><br/><br/>
+				<label>密码</label>
+				<input type="password"  placeholder="请输入密码" class="user" id="password"/><br/><br/>
+				<input type="button" value="登录" onclick="login()"/>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.all{
+				width: 1200px;
+				height: 500px;
+				margin: 0 auto;
+			}
+			.aa{
+				width: 100%;
+				height: 40px;
+				background-color: #5DC7FF;
+				
+			}
+			a{
+				line-height: 40px;
+				color: #F0FFFF;
+				text-decoration: none;	
+			}
+			.a1:active{
+				color: #DB7093;
+			}
+			.a2:active{
+				color: aquamarine;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<div class="aa">
+				<a href="#" class="a1" onclick="register()" id="register">注册&nbsp;|</a>
+				<a href="#" class="a2" onclick="login()" id="login">&nbsp;登录</a>
+			</div>	
+			<div id="">
+				<h1>这是主页面</h1>
+			</div>
+		</div>
+		<script>
+			function register(){
+				window.open('index10_1.html','_blank','width=400,height=300')
+				window.focus();
+			}
+			function login(){
+				window.open('index10_2.html','_blank','width=350,height=200')
+				window.focus();
+			}
+		</script>
+	</body>
+</html>
