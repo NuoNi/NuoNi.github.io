@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数据校验</title>
+		<style type="text/css">
+			label{
+				text-align: left;
+				display: inline-block;
+				width: 80px;
+			}
+			
+			input{
+				margin-bottom: 10px;
+				padding: 2px;
+			}
+			#sub{
+				
+				margin-top: 10px;
+			}
+			textarea{
+				vertical-align: middle;
+			}
+		</style>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			//当用户离开文本框还是为空，就提示输入用户名
+			function Username(){
+				var nameDom =$("text").value;
+				if(nameDom == null || nameDom == ""){
+					var x = $("name_font").innerHTML='<font color="#FF7F50" size="2">用户名不得为空!</font>';
+				}else{
+					$("name_font").innerText="";
+				}
+			}
+			
+			//判断密码位数
+			function UserPassword(){
+				var passDom = $("password").value;
+				if(passDom.length<=6){
+					var x = $("pass_font").innerHTML='<font color="#a8ff25" size="2">密码长度必须大于6位!</font>';
+				}else{
+					$("pass_font").innerText="";
+				}
+			}
+			//选中city
+			function city(){
+				// 通过 onchange事件 来 获取 所选中的 城市
+				// 获取dom
+				
+				
+			}
+			//提交
+			function OnSubmit(){
+				//获取账户值
+				var account = $("text").value;
+				//获取密码
+				var password = $("password").value;
+				//获取选中性别
+				//通过 标签的name属性 获取dom
+				var sexdom = document.getElementsByName("sex");
+				for (var i =0;i<sexdom.length;i++){
+					// checked 用来表示单选按钮是否被选中，值为Boolean型（true或false）
+					if(sexdom[i].checked){
+						var sex1=sexdom[i].value;
+					}
+				}
+				//获取选中血型
+				var BTdom = document.getElementsByName("BT");
+				for(var i=0 ;i<BTdom.length;i++){
+					if(BTdom[i].checked){
+						var bt=BTdom[i].value;
+					}
+				}
+				//获取选中性格
+				var Xgdom = document.getElementsByName("aihao");
+				for(var i=0;i<Xgdom.length;i++){
+					if(Xgdom[i].checked){
+						var xg = Xgdom[i].value;
+					}
+				}
+				//获取简介
+				var textDom = $("content").value;
+				//获取城市
+			    var cityDom = document.getElementById("city_select");
+			    // 索引是从0开始的
+			    var index = cityDom.selectedIndex;
+			    // alert(index);
+			    var city = cityDom.options[index].value;
+				
+				if(account == null && password == ""){
+					alert("提交失败");
+				}
+				else{
+				alert('用户信息详情\n'+'账号：'+account+'\n密码:'+password+
+				'\n性别:'+sex1+'\n血型:'+bt+'\n性格：'+xg+'\n简介：'+textDom+
+				'\n城市：'+city);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<label>姓名:</label>
+			<input type="text" name="name" required onblur="Username()" id="text"/><font id="name_font"></font><br />
+			<label>密码:</label>
+			<input type="password" name="" id="password" onchange="UserPassword()" /><font id="pass_font"></font><br />
+			<label>性别:</label>
+			<input type="radio" name="sex" id="boy" value="男"/>男<input type="radio" name="sex" id="girl" value="女" />女<br />
+			<label>血型:</label>
+			<input type="radio" required name="BT" value="O"/>O<input type="radio" required name="BT" value="A"/>A
+			<input type="radio" required name="BT" value="B"/>B<input type="radio" required name="BT" value="AB"/>AB<br />
+			<label >性格:</label>
+			<input type="checkbox" name="aihao" id="box1" value="热情大方" />热情大方
+			<input type="checkbox" name="aihao" id="box2" value="温柔体贴" />温柔体贴
+			<input type="checkbox" name="aihao" id="box3" value="多情善感" />多情善感<br>
+			<label>文件:</label>
+			<input type="url" name="" id="url" value="" readonly="readonly"/>
+			<input type="file" name="" id="dile" value="" /><br />
+			<label>简介:</label>
+			<textarea id="content"></textarea><br />
+			<label>城市:</label>
+			<select name="" id="city_select">
+				<option value="北京市" selected="selected">北京市</option>
+				<option value="成都市">成都市</option>
+				<option value="德阳市">德阳市</option>
+				<option value="南充市">南充市</option>
+			</select><br />
+			<input type="submit" id="sub" value="提交" onclick="OnSubmit()"/>
+			<input type="reset" name="" id="reset" value="重置" />
+		</form>
+	</body>
+</html>
