@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>复制文本</title>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			}
+			function Text_btn(){
+				var x =$("text").value;
+				if(	x!==null && x!==""){
+					$("text1").value=x;
+					$("label").innerText="复制成功！";
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" name="" id="text" />
+		<input type="button" name="" id="button" value="复制" onclick="Text_btn()"/>
+		<input type="text" name="" id="text1"  readonly="readonly"/><br/><br/>
+		<label id="label"></label>
+	</body>
+</html>

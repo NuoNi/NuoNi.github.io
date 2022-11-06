@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册页面验证</title>
+		<style type="text/css">
+			input{
+				padding: 2px;
+			}
+		</style>
+		
+		<script type="text/javascript">
+		
+			function $ (id){
+				return document.getElementById(id);
+			}
+			function Username(){
+				var x = document.getElementById("usename");
+				var name= x.value;
+				//失去焦点时，判断文本框中是否有值
+				if(name == null || name == ""){
+					$("user_font").innerHTML = '<font color="#5DC7FF" size="1">用户名不得为空</font>';
+				}	
+			}
+			function Userclear(){
+				var x = document.getElementById("usename").value;
+				if(x !== null || x !== ""){
+					$("user_font").innerText= "";
+				}
+			}
+			//输入密码至少六位
+			function Userpassword(){
+				var y = document.getElementById("password").value;
+				if(y.length<6){
+					$("pass_font").innerHTML = '<font color="darkred" size="1">密码至少6位！</font>';
+				}
+				
+			}
+			function Password(){
+				var x = document.getElementById("password").value;
+				if(x !== null || x !== ""){
+					$("pass_font").innerText= "";
+				}
+			}
+			//判断两次密码是否一致
+			function Myword(){
+				var y = document.getElementById("password").value;
+				var word = document.getElementById("password1").value;
+				if(word !== y){
+					$("pass1_font").innerHTML = '<font color="yellowgreen" size="1">两次密码不一致，请重新输入</font>';
+				}
+				else{
+					alert('密码正确');	
+				}
+			}
+			function Password1(){
+				var x = document.getElementById("password1").value;
+				if(x !== null || x !== ""){
+					$("pass1_font").innerText= "";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="" >
+			<input type="text" name="" id="usename" value="" placeholder="请输入用户名" onblur="Username()" onfocus="Userclear()"/><font size="" color="" id="user_font"></font><br/><br/>
+			<input type="password" name="" id="password" placeholder="请输入密码" onchange="Userpassword()" onfocus="Password()"/><font size="" color="" id="pass_font"></font><br/><br/>
+			<input type="password" name="" id="password1" onchange="Myword()" placeholder="请再次输入密码" onfocus="Password1()"/><font size="" color="" id="pass1_font"></font><br/><br/>	
+		</form>
+	</body>
+</html>
